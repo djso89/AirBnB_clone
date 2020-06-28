@@ -26,3 +26,18 @@ class BaseModel:
         return ("[{}] ({}) {}".
                 format(self.__class__.__name__,self.id, self.__dict__))
 
+    def save(self):
+        """save the instances """
+        self.updated_at = datetime.now()
+
+    def to_dict(self):
+        """
+        returns a dictionary containing all the keys of __dict__
+        of the instances
+        """
+        base_dict = {}
+        for key, value in self.__dict__.items():
+            if isinstance(value, datetime):
+                value = value.isoformat()
+            base_dict[key] = value
+        return base_dict
