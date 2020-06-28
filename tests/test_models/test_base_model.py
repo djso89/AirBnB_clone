@@ -11,3 +11,4 @@ class BaseModelTest(unittest.TestCase):
     def test_print_id(self):
         b1 = BaseModel()
         print(b1.id)
+        print(b1)
