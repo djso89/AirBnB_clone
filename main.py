@@ -6,3 +6,5 @@ if __name__ == "__main__":
 
     b1 = BaseModel()
     print(b1.id)
+
+    print(b1)
