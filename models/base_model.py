@@ -10,7 +10,6 @@ import os
 from datetime import datetime, date, time
 
 
-
 class BaseModel:
     """Defines all common attributes/methods for other classes"""
 
@@ -20,11 +19,10 @@ class BaseModel:
         self.created_at = datetime.now()
         self.updated_at = datetime.now()
 
-
     def __str__(self):
-        #return the string version of BaseModel
+        # return the string version of BaseModel
         return ("[{}] ({}) {}".
-                format(self.__class__.__name__,self.id, self.__dict__))
+                format(self.__class__.__name__, self.id, self.__dict__))
 
     def save(self):
         """save the instances """
