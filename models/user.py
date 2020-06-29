@@ -5,7 +5,7 @@ This module define class User that inherits from BaseModel
 from models.base_model import BaseModel
 
 
-class User:
+class User(BaseModel):
     """User class defines User information"""
     email = ""
     password = ""

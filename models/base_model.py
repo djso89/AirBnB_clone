@@ -6,6 +6,7 @@ This module define class BaseModel
 import json
 import uuid
 import os
+import models
 
 from datetime import datetime, date, time
 
@@ -33,6 +34,8 @@ class BaseModel:
     def save(self):
         """save the instances """
         self.updated_at = datetime.now()
+        models.storage.new(self)
+        models.storage.save()
 
     def to_dict(self):
         """
