@@ -1,7 +1,7 @@
 # AirBnB clone - The Console
 
 <p align="center">
-<img src="https://holbertonintranet.s3.amazonaws.com/uploads/medias/2018/6/65f4a1dd9c51265f49d0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUWMNL5ANN%2F20200628%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200628T201628Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=7669f6a47e6d34b165f0dc9013fe2f92d6714a9a22a3eb5ace69ee20037559c1" height="308" width="508">
+<img src="https://lh3.googleusercontent.com/qTsVtUimRLaUKQqH7HTRXUaDIht_aB6bgj8T-7GRbd9Fg3Kpdz0gZcfkEWNEf8a10h7iRg=s170" height="308" width="508">
 </p>
 
 ### Description
@@ -10,8 +10,50 @@ This is the first step towards building our first full web application: the Airb
 ___
 ## Project Requirements
 
-### General
+### Python Scripts
+- Allowed editors: vi, vim, emacs
+- All your files will be interpreted/compiled on Ubuntu 14.04 LTS using python3 (version 3.4.3)
+- All your files should end with a new line
+- The first line of all your files should be exactly #!/usr/bin/python3
+- A README.md file, at the root of the folder of the project, is mandatory
+- Your code should use the PEP 8 style (version 1.7 or more)
+- All your files must be executable
+- The length of your files will be tested using wc
+- All your modules should have a documentation (python3 -c 'print(__import__("my_module").__doc__)')
+- All your classes should have a documentation (python3 -c 'print(__import__("my_module").MyClass.__doc__)')
+- All your functions (inside and outside a class) should have a documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)' and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
 
+### Python Unit Tests
+- Allowed editors: vi, vim, emacs
+- All your files should end with a new line
+- All your test files should be inside a folder tests
+- You have to use the unittest module
+- All your test files should be python files (extension: .py)
+- All your test files and folders should start by test_
+- Your file organization in the tests folder should be the same as your project
+- e.g., For models/base_model.py, unit tests must be in: tests/test_models/test_base_model.py
+- e.g., For models/user.py, unit tests must be in: tests/test_models/test_user.py
+- All your tests should be executed by using this command: python3 -m unittest discover tests
+- You can also test file by file by using this command: python3 -m unittest tests/test_models/test_base_model.py
+- All your modules should have a documentation (python3 -c 'print(__import__("my_module").__doc__)')
+- All your classes should have a documentation (python3 -c 'print(__import__("my_module").MyClass.__doc__)')
+- All your functions (inside and outside a class) should have a documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)' and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
+- We strongly encourage you to work together on test cases, so that you don’t miss any edge case
+
+___
+## Installation
+
+## Usage
+
+### Interactive Mode
+
+### Non-interactive Mode
+
+___
+## Examples
+
+___
+## File Descriptions
 ___
 ### Authors
 * **Connie Millecan** - [cmillecan](https://github.com/cmillecan)
