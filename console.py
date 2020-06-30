@@ -30,10 +30,20 @@ class HBNBCommand(cmd.Cmd):
         Prints all string representation of all instances
         based or not on the class name
         """
-        if line or line == 'BaseModel':
-            print([str(value) for key, value in storage.all().items()])
+        instances = models.storage.all()
+        if line is "":
+            for key, value in instances.items():
+                print(value)
         else:
-            print("** class doesn't exist **")
+            args = line.split()
+            if args[0] not in self.tbd_name_based_on_do_create:
+                print("** class doesn't exist **")
+            else:
+                for key, value in instances.items():
+
+
+
+
 
     def do_EOF(self, line):
         """EOF command to exit the program"""
