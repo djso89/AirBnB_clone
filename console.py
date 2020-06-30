@@ -7,19 +7,31 @@ from models.base_model import BaseModel
 import models
 from models import storage
 
+modelnames = ("BaseModel", "")
 
 class HBNBCommand(cmd.Cmd):
     """Command interpreter"""
     prompt = '(hbnb) '
 
+    def do_create(self, line):
+        items = line.split()
+        if len(items) is 0:
+            print("** class name missing **")
+            return
+        if (items[0] in modelnames):
+            #do the create Model and print id
+            model = eval(items[0] + "()")
+            print(model.id)
+        else:
+            print("** class doesn't exist **")
 
     def do_all(self, line):
         """
         Prints all string representation of all instances
         based or not on the class name
         """
-        if not line or line == 'BaseModel':
-            print(str(value) for key, value in storage.all().items()])
+        if line or line == 'BaseModel':
+            print([str(value) for key, value in storage.all().items()])
         else:
             print("** class doesn't exist **")
 
@@ -37,6 +49,7 @@ class HBNBCommand(cmd.Cmd):
         Do nothing
         """
         pass
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
