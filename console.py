@@ -46,7 +46,7 @@ class HBNBCommand(cmd.Cmd):
 
     def emptyline(self):
         """
-        Do nothing
+        Do none
         """
         pass
 
