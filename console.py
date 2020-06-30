@@ -21,6 +21,8 @@ class HBNBCommand(cmd.Cmd):
         if (items[0] in modelnames):
             #do the create Model and print id
             model = eval(items[0] + "()")
+            storage.new(model)
+            storage.save()
             print(model.id)
         else:
             print("** class doesn't exist **")
@@ -30,8 +32,9 @@ class HBNBCommand(cmd.Cmd):
         Prints all string representation of all instances
         based or not on the class name
         """
-        if line or line == 'BaseModel':
-            print([str(value) for key, value in storage.all().items()])
+        vals = list(storage.all().values())
+        if line == "BaseModel":
+            print([str(val) for val in vals])
         else:
             print("** class doesn't exist **")
 
