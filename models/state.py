@@ -6,5 +6,8 @@ from models.base_model import BaseModel
 
 
 class State(BaseModel):
-    """docstring"""
+    """
+    Initialize class State with attribute
+        name: (str) name of the state
+    """
     name = ""
