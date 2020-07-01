@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
 """ Module file storage """
-from engine.file_storage import FileStorage
+from model.engine.file_storage import FileStorage
 storage = FileStorage()
 storage.reload()
