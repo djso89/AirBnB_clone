@@ -9,11 +9,17 @@ from models.base_model import BaseModel
 class BaseModelTest(unittest.TestCase):
     """ class BaseModel unittest """
     def test_print_id(self):
+        """
+        testing for id
+        """
         b1 = BaseModel()
         print(b1.id)
         print(b1)
 
     def test_to_dict(self):
+        """
+        convert to dictionary
+        """
         my_model = BaseModel()
         my_model.name = "Holberton"
         my_model.my_number = 89
@@ -28,6 +34,9 @@ class BaseModelTest(unittest.TestCase):
                   format(key, type(my_model_json[key]), my_model_json[key]))
 
     def test_init_base_model_dict(self):
+        """
+        testing for when the base model has a dictionary as a parameter
+        """
         my_model = BaseModel()
         my_model.name = "Holberton"
         my_model.my_number = 89
@@ -48,3 +57,6 @@ class BaseModelTest(unittest.TestCase):
         print(type(my_new_model.created_at))
         print("--")
         print(my_model is my_new_model)
+
+if __name__ == '__main__':
+    unittest.main()
