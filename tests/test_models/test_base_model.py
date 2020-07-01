@@ -2,12 +2,14 @@
 """
 Unittest for class BaseModel
 """
+
 import unittest
 from models.base_model import BaseModel
 
 
 class BaseModelTest(unittest.TestCase):
     """ class BaseModel unittest """
+
     def test_print_id(self):
         """
         testing for id
