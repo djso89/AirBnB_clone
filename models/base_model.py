@@ -12,7 +12,7 @@ from datetime import datetime, date, time
 
 
 class BaseModel:
-    """Defines all common attributes/methods for other classes"""
+    """Defines all common attributes/methods for other classes """
 
     def __init__(self, *args, **kwargs):
         """Initialize a BaseModel class"""
@@ -27,7 +27,9 @@ class BaseModel:
         self.updated_at = datetime.now()
 
     def __str__(self):
-        # return the string version of BaseModel
+        """
+        return the string version of BaseModel
+        """
         return ("[{}] ({}) {}".
                 format(self.__class__.__name__, self.id, self.__dict__))
 
