@@ -5,9 +5,7 @@ This module define class BaseModel
 
 import json
 import uuid
-import os
 import models
-
 from datetime import datetime, date, time
 
 
@@ -15,7 +13,8 @@ class BaseModel:
     """Defines all common attributes/methods for other classes """
 
     def __init__(self, *args, **kwargs):
-        """Initialize a BaseModel class"""
+        """Initialize a BaseModel class """
+
         if kwargs:
             for key, value in kwargs.items():
                 if key == "created_at" or key == "updated_at":
