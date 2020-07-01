@@ -3,9 +3,10 @@
 Contains the entry point of the command interpreter
 """
 import cmd
-from models.base_model import BaseModel
 import models
+from models.base_model import BaseModel
 from models import storage
+from datetime import datetime
 
 modelnames = ("BaseModel", "")
 
@@ -59,7 +60,43 @@ class HBNBCommand(cmd.Cmd):
         attribute
         """
         parsed_input = line.split()
-
+        if len(parsed_input) > 1:
+            key = "{}.{}".format(parsed_input[0], parsed_input[1])
+        if len(parsed_input) is 0:
+            print("** class name missing **")
+            return
+        elif len(parsed_input) == 1:
+            if parsed_input[0] in modelnames:
+                print("** instance id missing **")
+            else:
+                print("** class doesn't exist **")
+        elif len(parsed_input) == 2:
+            if parsed_input[0] in modelnames:
+                if key not in storage.all():
+                    print("** no instance found **")
+                else:
+                    print("** attribute name is missing **")
+            else:
+                print("** class doesn't exist **")
+        elif len(parsed_input) is 3:
+            if parsed_input[0] in modelnames:
+                if key not in storage.all():
+                    print("** no instance found **")
+                else:
+                    print("** value missing **")
+            else:
+                print("** class doesn't exist **")
+        elif len(parsed_input) is 4:
+            if parsed_input[0] in modelnames:
+                if key not in storage.all():
+                    print("** no instance found **")
+                else:
+                    setattr(storage.all()[key], parsed_input[2], parsed_input[3])
+                    setattr(storage.all()[key], "updated_at", datetime.now())
+                    storage.save()
+                    return
+            else:
+                print("** class doesn't exist **")
 
     def do_show(self, line):
         """
