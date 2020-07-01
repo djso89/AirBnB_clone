@@ -22,7 +22,33 @@ class HBNBCommand(cmd.Cmd):
         if (items[0] in modelnames):
             # do the create Model and print id
             model = eval(items[0] + "()")
+            storage.new(model)
+            storage.save()
             print(model.id)
+        else:
+            print("** class doesn't exist **")
+
+    def do_destroy(self, line):
+        """
+        Deletes an instance based on the
+        class name and id
+        (save the change into the JSON file).
+        """
+        line_items = line.split()
+        if len(line_items) is 0:
+            print("** class name missing **")
+            return
+        if line_items[0] in modelnames:
+            if len(line_items) < 2:
+                print("** instance id missing **")
+                return
+            key = line_items[0] + "." + line_items[1]
+            if key not in storage.all():
+                print("** no instance found **")
+                return
+            del(storage.all()[key])
+            storage.save()
+            return
         else:
             print("** class doesn't exist **")
 
@@ -49,6 +75,7 @@ class HBNBCommand(cmd.Cmd):
                     print(storage.all()[key])
             else:
                 print("** class doesn't exist **")
+
 
     def do_all(self, line):
         """
