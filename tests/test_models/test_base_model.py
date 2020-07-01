@@ -5,6 +5,8 @@ Unittest for class BaseModel
 import unittest
 from models.base_model import BaseModel
 from models.engine.file_storage import FileStorage
+import os
+import pep8
 
 
 class BaseModelTest(unittest.TestCase):
