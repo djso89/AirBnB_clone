@@ -52,6 +52,15 @@ class HBNBCommand(cmd.Cmd):
         else:
             print("** class doesn't exist **")
 
+    def do_update(self, line):
+        """
+        updates an instance based on the
+        class name and id by adding or updating
+        attribute
+        """
+        parsed_input = line.split()
+
+
     def do_show(self, line):
         """
         Prints the string representation of an instance
