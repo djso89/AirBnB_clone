@@ -9,6 +9,7 @@ from models import storage
 
 modelnames = ("BaseModel", "")
 
+
 class HBNBCommand(cmd.Cmd):
     """Command interpreter"""
     prompt = '(hbnb) '
@@ -19,7 +20,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class name missing **")
             return
         if (items[0] in modelnames):
-            #do the create Model and print id
+            # do the create Model and print id
             model = eval(items[0] + "()")
             storage.new(model)
             storage.save()
@@ -51,14 +52,39 @@ class HBNBCommand(cmd.Cmd):
         else:
             print("** class doesn't exist **")
 
+    def do_show(self, line):
+        """
+        Prints the string representation of an instance
+        based on the class name and id
+        """
+        parsed_input = line.split()
+        if len(parsed_input) > 1:
+            key = "{}.{}".format(parsed_input[0], parsed_input[1])
+        if len(parsed_input) < 1:
+            print("** class name missing **")
+        elif len(parsed_input) == 1:
+            if parsed_input[0] in modelnames:
+                print("** instance id missing **")
+            else:
+                print("** class doesn't exist **")
+        elif len(parsed_input) == 2:
+            if parsed_input[0] in modelnames:
+                if key not in storage.all():
+                    print("** no instance found **")
+                else:
+                    print(storage.all()[key])
+            else:
+                print("** class doesn't exist **")
+
+
     def do_all(self, line):
         """
         Prints all string representation of all instances
         based or not on the class name
         """
-        vals = list(storage.all().values())
-        if line == "BaseModel":
-            print([str(val) for val in vals])
+        instances = models.storage.all()
+        if line in modelnames:
+                print([str(value) for key, value in instances.items()])
         else:
             print("** class doesn't exist **")
 
