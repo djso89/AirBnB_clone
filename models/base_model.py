@@ -47,8 +47,10 @@ class BaseModel:
         of the instances
         """
         base_dict = {}
-        for key, value in self.__dict__.items():
-            if isinstance(value, datetime):
-                value = value.isoformat()
-            base_dict[key] = value
+        base_dict["__class__"] = self.__class__.__name__
+        if self.__dict__:
+            for key, value in self.__dict__.items():
+                if isinstance(value, datetime):
+                    value = value.isoformat()
+                base_dict[key] = value
         return base_dict
