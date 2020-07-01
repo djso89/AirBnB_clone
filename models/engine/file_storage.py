@@ -4,6 +4,7 @@ file_storage module
 """
 
 import json
+from models.base_model import BaseModel
 
 
 class FileStorage:
