@@ -5,8 +5,8 @@ This module define class BaseModel
 
 import json
 import uuid
-import models
 from datetime import datetime, date, time
+from models import storage
 
 
 class BaseModel:

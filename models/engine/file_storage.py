@@ -2,8 +2,8 @@
 """
 file_storage module
 """
+
 import json
-import models
 from models.base_model import BaseModel
 
 
@@ -18,7 +18,8 @@ class FileStorage:
         return FileStorage.__objects
 
     def new(self, obj):
-        """ sets in __objects the obj
+        """
+        sets in __objects the obj
         with key <obj class name>.id
         """
         class_name = obj.__class__.__name__
