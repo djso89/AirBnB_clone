@@ -6,5 +6,8 @@ from models.base_model import BaseModel
 
 
 class Amenity(BaseModel):
-    """ docstring """
+    """
+    Initialize class Amenity with attribute
+        name: (str) name of the amenity
+    """
     name = ""
