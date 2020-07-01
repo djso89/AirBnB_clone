@@ -25,24 +25,16 @@ class HBNBCommand(cmd.Cmd):
         else:
             print("** class doesn't exist **")
 
-    def do_all(self, line):
+def do_all(self, line):
         """
         Prints all string representation of all instances
         based or not on the class name
         """
         instances = models.storage.all()
-        if line is "":
-            for key, value in instances.items():
-                print(value)
+        if line in modelnames:
+                print([str(value) for key, value in instances.items()])
         else:
-            args = line.split()
-            if args[0] not in self.tbd_name_based_on_do_create:
-                print("** class doesn't exist **")
-            else:
-                for key, value in instances.items():
-
-
-
+            print("** class doesn't exist **")
 
 
     def do_EOF(self, line):
