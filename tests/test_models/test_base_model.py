@@ -5,7 +5,8 @@ Unittest for class BaseModel
 
 import unittest
 from models.base_model import BaseModel
-
+from models import storage
+from models.engine.file_storage import FileStorage
 
 class BaseModelTest(unittest.TestCase):
     """ class BaseModel unittest """

@@ -3,9 +3,9 @@
 This module define class BaseModel
 """
 
-import models
 import uuid
-from datetime import datetime, date, time
+from datetime import datetime
+import models
 
 
 class BaseModel:
