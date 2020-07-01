@@ -91,7 +91,8 @@ class HBNBCommand(cmd.Cmd):
                 if key not in storage.all():
                     print("** no instance found **")
                 else:
-                    setattr(storage.all()[key], parsed_input[2], parsed_input[3])
+                    setattr(storage.all()[key], parsed_input[2],
+                            parsed_input[3])
                     setattr(storage.all()[key], "updated_at", datetime.now())
                     storage.save()
                     return
