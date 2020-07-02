@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""hello 
+"""
 Contains the entry point of the command interpreter
 """
 import cmd
