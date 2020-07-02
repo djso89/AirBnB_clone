@@ -5,7 +5,7 @@
 </p>
 
 ### Description
-This is the first step towards building our first full web application: the Airbnb clone.
+This is the first step towards building our first full web application: the Airbnb clone. The Console is a command interpreter to manage our Airbnb objects. 
 
 ___
 ## Project Requirements
@@ -41,19 +41,11 @@ ___
 - We strongly encourage you to work together on test cases, so that you don’t miss any edge case
 
 ___
-## Installation
-
-## Usage
+## Examples
 
 ### Interactive Mode
 
 ### Non-interactive Mode
-
-___
-## Examples
-
-___
-## File Descriptions
 ___
 ### Authors
 * **Connie Millecan** - [cmillecan](https://github.com/cmillecan)
