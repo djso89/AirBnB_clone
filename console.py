@@ -9,7 +9,8 @@ from models.user import User
 from models import storage
 from datetime import datetime
 
-modelnames = ("BaseModel", "User")
+modelnames = ("BaseModel", "User", "Place", "State", "City",
+              "Amenity", "Review")
 
 
 class HBNBCommand(cmd.Cmd):
