@@ -41,13 +41,31 @@ ___
 - We strongly encourage you to work together on test cases, so that you don’t miss any edge case
 
 ___
+## Usage
+
+### How to start it
+```
+$ ./console.py
+```
+
+### how to use it
+```
+$ ./console.py
+(hbnb) help
+
+Documented commands (type help <topic>):
+========================================
+EOF  all  destroy  help  quit  show  update
+```
+___
 ## Examples
 
 ### Interactive Mode
 
 ### Non-interactive Mode
+
 ___
 ### Authors
-* **Connie Millecan** - [cmillecan](https://github.com/cmillecan)
+* **Constance Millecan** - [cmillecan](https://github.com/cmillecan)
 * **Daniel So** - [djso89](https://github.com/djso89)
 * **Michelle Domingo** - [michedomingo](https://github.com/michedomingo)
