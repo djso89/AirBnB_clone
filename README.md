@@ -48,7 +48,7 @@ ___
 $ ./console.py
 ```
 
-### how to use it
+### How to use it
 ```
 $ ./console.py
 (hbnb) help
@@ -56,6 +56,9 @@ $ ./console.py
 Documented commands (type help <topic>):
 ========================================
 EOF  all  destroy  help  quit  show  update
+
+(hbnb) quit
+$
 ```
 ___
 ## Examples
